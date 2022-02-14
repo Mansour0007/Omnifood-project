@@ -10,15 +10,6 @@ const headerEl = document.querySelector(".header");
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
-// back to top arrow
-const toTop = document.querySelector(".to-top");
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 1000) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
-});
 
 // Smooth scrolling animation for all browsers
 
@@ -47,6 +38,16 @@ allLinks.forEach(function (link) {
   });
 });
 
+// back to top arrow
+const toTop = document.querySelector(".to-top");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 1000) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+});
+/*
 //Sticky navigation
 const sectionHeroEl = document.querySelector(".section-hero");
 
@@ -93,7 +94,7 @@ checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
-/*
+
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
   margin-right: 4.8rem;
 }
